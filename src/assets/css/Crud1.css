@@ -1,0 +1,8 @@
+.mainDiv{
+    width: 70%;
+    margin: 0px auto;
+}
+.mainDiv > h1{
+    font-style: italic;
+    color: blue;
+}
