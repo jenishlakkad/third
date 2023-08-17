@@ -1,6 +1,7 @@
 .mainDiv{
     width: 70%;
     margin: 0px auto;
+    text-align: left;
 }
 .mainDiv > h1{
     font-style: italic;

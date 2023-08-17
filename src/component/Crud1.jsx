@@ -10,10 +10,10 @@ import { Form, FormControl, Button,Table } from "react-bootstrap";
 import css from '../assets/css/Crud1.css'
 import FormGroup from "react-bootstrap/esm/FormGroup";
 
-const defaultObject = {
-  password: '', hobbies: [], gender: '', dob: ''
-}
 const Crud1 = () => {
+  const defaultObject = {
+    password: '', hobbies: [], gender: '', dob: ''
+  }
   const [userData, setUserData] = useState(defaultObject)
   const [array, setArray] = useState([])
 
@@ -35,14 +35,15 @@ const Crud1 = () => {
     event.preventDefault()
     setArray([...array, userData])
     setUserData(defaultObject)
+    document.querySelector('#userForm').reset()
     console.log(array);
   }
   return (
     <>
       <div className="mainDiv">
-        <Form>
+        <Form id="userForm">
           <Form.Group controlId="formBasicEmail">
-            <Form.Label>Email Address</Form.Label>
+            <Form.Label>Password:-</Form.Label>
             <Form.Control type = 'password' value={setUserData.password} name = 'password' placeholder='enter Password' onChange= {handleChange}></Form.Control>
           </Form.Group>
 
